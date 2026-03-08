@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from './login_page/Login';
+import UserLogin from './login_page/UserLogin';
+import AdminLogin from './login_page/AdminLogin';
+import QuestionnaireOne from './questionnaire_page/QuestionnaireOne';
+import QuestionnaireTwo from './questionnaire_page/QuestionnaireTwo';
+import QuestionnaireThree from './questionnaire_page/QuestionnaireThree';
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>        
+        <Route path="/" element={<Login />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/user-login" element={<UserLogin />} />
+        <Route path="/questionnaire-one" element={<QuestionnaireOne />} />
+        <Route path="/questionnaire-two" element={<QuestionnaireTwo />} />
+        <Route path="/questionnaire-three" element={<QuestionnaireThree />} />
+      </Routes>
     </div>
   );
 }
