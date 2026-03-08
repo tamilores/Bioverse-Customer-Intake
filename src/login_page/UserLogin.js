@@ -2,18 +2,20 @@ import { Container, Typography, Card, CardMedia, IconButton } from "@mui/materia
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useNavigate } from "react-router-dom";
 import Header from "../header_footer/Header";
+import Footer from "../header_footer/Footer";
 
 function UserLogin(){
     const navigate = useNavigate();
     return(
         <>
         <Header />
+
         <Container>
             <Typography variant="h3">What are you trying to achieve?</Typography>
 
             <div>
                 <Card sx={{ width: 50, height: 100}}>
-                    <Typography variant="subtitle2">Product 1</Typography>
+                    <Typography variant="subtitle2">Semaglutide</Typography>
                     <div>
                         <IconButton onClick={() => navigate("/questionnaire-one")}>
                             <ArrowForwardIcon />
@@ -23,11 +25,11 @@ function UserLogin(){
                     component="img"
                     image="/image.jpg"
                     sx={{ width: 50, height: 100}}
-                    alt="Pasta dish"/>
+                    alt="Semaglutide"/>
                 </Card>
 
                 <Card sx={{ width: 50, height: 100}}>
-                    <Typography variant="subtitle2">Product 2</Typography>
+                    <Typography variant="subtitle2">NAD-Injection</Typography>
                     <div>
                         <IconButton onClick={() => navigate("/questionnaire-two")}>
                             <ArrowForwardIcon />
@@ -37,11 +39,11 @@ function UserLogin(){
                     component="img"
                     image="/image.jpg"
                     sx={{ width: 50, height: 100}}
-                    alt="Pasta dish"/>
+                    alt="NAD-Injection"/>
                 </Card>
 
                 <Card sx={{ width: 50, height: 100}}>
-                    <Typography variant="subtitle2">Product 3</Typography>
+                    <Typography variant="subtitle2">Metformin</Typography>
                     <div>
                         <IconButton onClick={() => navigate("/questionnaire-three")}>
                             <ArrowForwardIcon />
@@ -51,10 +53,12 @@ function UserLogin(){
                     component="img"
                     image="/image.jpg"
                     sx={{ width: 50, height: 100}}
-                    alt="Pasta dish"/>
+                    alt="Metformin"/>
                 </Card>       
             </div>
         </Container>
+
+        <Footer />
         </>
     );
 }   
